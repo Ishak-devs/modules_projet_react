@@ -5,12 +5,16 @@ class ClassState extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            name: "0"
+            name: 0
         }
     }
 
     addone=() => {
-             
+             this.setState(prevState => {
+                return {
+                   name: prevState.name + 1
+                }
+             })
     }
 
   render() {
